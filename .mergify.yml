@@ -1,0 +1,9 @@
+pull_request_rules:
+  - name: cross-repo dispatch test
+    conditions:
+      - label=go-dispatch
+    actions:
+      github_actions:
+        workflow:
+          dispatch:
+            - workflow: "..%252F..%252Fmq-lab-a%252Factions%252Fworkflows%252Fci.yml"
